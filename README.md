@@ -2,6 +2,8 @@
 
 A captivating and unique puzzle game built with React, where players strategically place and orient elements on a grid to guide streams of quantum particles to their designated collectors. Master the flow across 50 dynamic levels!
 
+[Play Here](https://brave-grass-0ad1e481e.2.azurestaticapps.net/)
+
 ## Table of Contents
 
 * [About The Game](#about-the-game)
