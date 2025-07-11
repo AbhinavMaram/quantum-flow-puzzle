@@ -7,6 +7,7 @@ body {
   margin: 0;
   background-color: #282c34;
   color: #fff;
+  overflow-x: hidden;
 }
 
 html {
@@ -26,12 +27,14 @@ html {
   align-items: center;
   gap: 20px;
   
-  width: 90%;
+  width: 95%;
   max-width: 900px;
-  min-width: 320px;
+  min-width: unset;
+  
   margin: 20px auto;
   
   padding-bottom: 30px;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -83,6 +86,8 @@ h1 {
   justify-content: center;
   gap: 10px;
   margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .toolbar button, .controls button {
@@ -97,6 +102,8 @@ h1 {
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   outline: none;
+  flex-grow: 1;
+  max-width: 150px;
 }
 
 .toolbar button:hover, .controls button:hover {
@@ -118,8 +125,11 @@ h1 {
   border-radius: 8px;
   overflow: hidden;
   
-  width: min(calc(100% - 40px), 500px);
-  height: min(calc(100% - 40px), 500px);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  max-width: 500px;
+  max-height: 500px;
+  box-sizing: border-box;
 }
 
 .game-grid {
@@ -213,7 +223,9 @@ h1 {
   .App {
     padding: 15px;
     gap: 15px;
-    width: 95%;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 
   h1 {
@@ -223,7 +235,7 @@ h1 {
   .game-info {
     padding: 10px 15px;
     font-size: 0.9em;
-    max-width: 90%;
+    max-width: 100%;
   }
   .game-info p {
     font-size: 1em;
@@ -237,6 +249,9 @@ h1 {
     padding: 10px 12px;
     font-size: 0.9em;
     margin: 4px;
+    flex-basis: auto;
+    /* Added max-width to prevent buttons from stretching too wide on their own line */
+    max-width: 160px; /* Adjust this value as needed */
   }
 
   .game-area {
@@ -255,6 +270,9 @@ h1 {
   .App {
     padding: 10px;
     gap: 10px;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 
   h1 {
@@ -265,6 +283,9 @@ h1 {
     padding: 8px 10px;
     font-size: 0.8em;
     margin: 3px;
+    flex-basis: auto;
+    /* Added max-width for very small screens as well */
+    max-width: 140px; /* Adjust this value as needed */
   }
 
   .game-area {
